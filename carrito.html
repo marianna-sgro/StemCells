@@ -164,7 +164,7 @@
   <div class="container">
     <div class="footer-newsletter">
       <h2 class="footer-newsletter__title">Regístrate para recibir novedades de Stem Cells</h2>
-      <form class="footer-newsletter__form" onsubmit="return false;" novalidate aria-label="Suscripción al boletín">
+      <form class="footer-newsletter__form" id="newsletterForm" novalidate aria-label="Suscripción al boletín">
         <input type="email" class="footer-newsletter__input" placeholder="Dirección de correo electrónico" aria-label="Correo electrónico" autocomplete="email">
         <button type="submit" class="footer-newsletter__btn">Regístrate <span aria-hidden="true">›</span></button>
       </form>
@@ -316,6 +316,19 @@
   </div>
 </div>
 
+<!-- ERROR POPUP -->
+<div class="success-popup" id="checkoutErrorPopup" aria-hidden="true" role="alertdialog" aria-modal="true">
+  <div class="success-popup__backdrop"></div>
+  <div class="success-popup__box">
+    <div class="success-popup__icon" style="color:var(--c-magenta)" aria-hidden="true">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+    </div>
+    <h2 class="success-popup__title">Campos incompletos</h2>
+    <p class="success-popup__sub" id="checkoutErrorMsg">Por favor, completa todos los campos obligatorios.</p>
+    <button onclick="document.getElementById('checkoutErrorPopup').classList.remove('is-open');document.getElementById('checkoutErrorPopup').setAttribute('aria-hidden','true')" class="btn-primary" style="background:var(--c-magenta);border:none;cursor:pointer">Entendido</button>
+  </div>
+</div>
+
 <!-- SUCCESS POPUP -->
 <div class="success-popup" id="successPopup" aria-hidden="true" role="alertdialog" aria-label="Pedido realizado">
   <div class="success-popup__backdrop"></div>
@@ -329,6 +342,34 @@
   </div>
 </div>
 
+
+<!-- NEWSLETTER POPUP -->
+<div class="success-popup" id="newsletterPopup" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="success-popup__backdrop"></div>
+  <div class="success-popup__box">
+    <div class="success-popup__icon" aria-hidden="true">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+    </div>
+    <h2 class="success-popup__title">¡Gracias por suscribirte!</h2>
+    <p class="success-popup__sub">Te mantendremos al tanto de todas las novedades de Stem Cells.</p>
+    <button onclick="document.getElementById('newsletterPopup').classList.remove('is-open');document.getElementById('newsletterPopup').setAttribute('aria-hidden','true')" class="btn-primary" style="background:var(--c-rose);border:none;cursor:pointer">Aceptar</button>
+  </div>
+</div>
+<script>
+(function(){
+  var form = document.getElementById('newsletterForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = form.querySelector('input[type="email"]').value.trim();
+    if (!email) return;
+    form.reset();
+    var popup = document.getElementById('newsletterPopup');
+    popup.classList.add('is-open');
+    popup.setAttribute('aria-hidden', 'false');
+  });
+})();
+</script>
 <script src="js/components.js"></script>
 <script>
 (function () {
@@ -427,6 +468,34 @@
 
   document.getElementById('checkoutForm').addEventListener('submit', function (e) {
     e.preventDefault();
+
+    // Validación de campos obligatorios
+    var fields = [
+      { id: 'co-nombre',    label: 'Nombre' },
+      { id: 'co-apellidos', label: 'Apellidos' },
+      { id: 'co-email',     label: 'Email' },
+      { id: 'co-direccion', label: 'Dirección' },
+      { id: 'co-ciudad',    label: 'Ciudad' },
+      { id: 'co-cp',        label: 'Código postal' },
+      { id: 'co-pais',      label: 'País' },
+      { id: 'co-tarjeta',   label: 'Número de tarjeta' },
+      { id: 'co-titular',   label: 'Nombre del titular' },
+      { id: 'co-caducidad', label: 'Fecha de caducidad' },
+      { id: 'co-cvv',       label: 'CVV' }
+    ];
+    var missing = fields.filter(function(f){
+      return !document.getElementById(f.id).value.trim();
+    }).map(function(f){ return f.label; });
+
+    if (missing.length) {
+      document.getElementById('checkoutErrorMsg').textContent =
+        'Por favor, completa los siguientes campos obligatorios: ' + missing.join(', ') + '.';
+      var ep = document.getElementById('checkoutErrorPopup');
+      ep.classList.add('is-open');
+      ep.setAttribute('aria-hidden', 'false');
+      return;
+    }
+
     var cart = getCart();
     var subtotal = cart.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
     var shipping = subtotal < 50 ? 4.99 : 0;
