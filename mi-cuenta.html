@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cuenta — Stem Cells Cosmética Profesional</title>
+  <meta name="description" content="Consulta tus pedidos realizados en Stem Cells Cosmética Profesional.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="promobar" role="region" aria-label="Anuncios y promociones">
+    <div class="promobar__track">
+      <span class="promobar__msg promobar__msg--1">Envío gratuito en pedidos superiores a 50&nbsp;€</span>
+      <span class="promobar__msg promobar__msg--2">Asesoría personalizada gratuita para tu salón o uso personal</span>
+      <span class="promobar__msg promobar__msg--3">Descubre nuestros nuevos productos con células madre vegetales</span>
+    </div>
+    <div class="promobar__lang">
+      <a href="#" class="promobar__lang-link promobar__lang-link--active" lang="es" aria-label="Español">ESP</a>
+      <span class="promobar__lang-sep" aria-hidden="true">|</span>
+      <a href="#" class="promobar__lang-link" lang="en" aria-label="English">EN</a>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle__input" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle__label" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </label>
+    <a href="index.html" class="main-nav__logo-link">
+      <img src="images/logo.png" alt="Stem Cells Cosmética Profesional" class="main-nav__logo">
+    </a>
+    <ul class="main-nav__list">
+      <li><a href="quienes-somos.html" class="main-nav__link">Quienes Somos</a></li>
+      <li class="main-nav__item--has-drop">
+          <a href="catalogo.html" class="main-nav__link">Catálogo <svg class="nav-drop-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
+          <div class="nav-dropdown">
+            <ul class="nav-dropdown__list">
+              <li><a href="catalogo.html?open=ampollas-nutri-cell" class="nav-dropdown__link">Ampollas Nutri + Cell</a></li>
+              <li><a href="catalogo.html?open=shampoo" class="nav-dropdown__link">Shampoo Pre-Tratamiento</a></li>
+              <li><a href="catalogo.html?open=protector-termico" class="nav-dropdown__link">Protector Térmico Nutricell</a></li>
+              <li><a href="catalogo.html?open=crema-de-peinar" class="nav-dropdown__link">Crema de Peinar Nutricell</a></li>
+              <li><a href="catalogo.html?open=alpin-rose" class="nav-dropdown__link">Ampolla Alpin Rose</a></li>
+              <li><a href="catalogo.html?open=btx-express" class="nav-dropdown__link">Ampolla BTX Express</a></li>
+              <li><a href="catalogo.html?open=cocktail-express" class="nav-dropdown__link">Cocktail EXPRESS</a></li>
+              <li class="nav-dropdown__divider"></li>
+              <li><a href="catalogo.html" class="nav-dropdown__link nav-dropdown__link--all">Ver todo →</a></li>
+            </ul>
+          </div>
+        </li>
+      <li><a href="donde-encontrarnos.html" class="main-nav__link">Donde encontrarnos</a></li>
+      <li><a href="tutoriales.html" class="main-nav__link">Tutoriales</a></li>
+    </ul>
+    <div class="main-nav__actions">
+      <button class="main-nav__action-btn" id="searchBtn" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M16.5 16.5L22 22"/>
+        </svg>
+      </button>
+      <a href="mi-cuenta.html" class="main-nav__action-btn" aria-label="Iniciar sesión / Cuenta">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-3.5 3.6-6 8-6s8 2.5 8 6"/>
+        </svg>
+      </a>
+      <a href="carrito.html" class="main-nav__action-btn" aria-label="Carrito" style="position:relative">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none" aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+      <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Mi cuenta</li>
+    </ol>
+  </div>
+</nav>
+
+<main id="main-content">
+  <section class="section" style="background:var(--c-white);padding-block:0.9rem 4rem">
+    <div class="container" style="max-width:860px">
+
+      <h1 class="section-title" style="margin-bottom:2.5rem;text-align:left">Mis pedidos</h1>
+
+      <div id="ordersEmpty" style="display:none;text-align:center;padding:4rem 1rem">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="color:var(--c-border);margin-bottom:1.25rem" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+        </svg>
+        <p style="font-family:var(--font-display);font-size:1.3rem;color:var(--c-ink);margin-bottom:0.75rem">Aún no tienes pedidos</p>
+        <p style="font-size:0.9rem;color:var(--c-mid);margin-bottom:2rem">Cuando realices un pedido aparecerá aquí.</p>
+        <a href="catalogo.html" class="btn-primary" style="background:var(--c-rose)">Ver catálogo</a>
+      </div>
+
+      <div id="ordersList"></div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" aria-label="Pie de página">
+  <div class="container">
+    <div class="footer-newsletter">
+      <h2 class="footer-newsletter__title">Regístrate para recibir novedades de Stem Cells</h2>
+      <form class="footer-newsletter__form" action="#" method="post" novalidate aria-label="Suscripción al boletín">
+        <input type="email" class="footer-newsletter__input" placeholder="Dirección de correo electrónico" aria-label="Correo electrónico" autocomplete="email">
+        <button type="submit" class="footer-newsletter__btn">Regístrate <span aria-hidden="true">›</span></button>
+      </form>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Stem Cells Cosmética Profesional" class="footer-logo">
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3 class="footer-col__title">Soporte</h3>
+          <ul class="footer-col__list">
+            <li class="footer-col__item"><a href="contacto.html" class="footer-col__item">Contacta con nosotros</a></li>
+            <li class="footer-col__item"><a href="faq.html" class="footer-col__item">FAQ</a></li>
+            <li class="footer-col__item"><a href="donde-encontrarnos.html" class="footer-col__item">Localizador de salones</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col__title">Legal</h3>
+          <ul class="footer-col__list">
+            <li class="footer-col__item">Términos y condiciones</li>
+            <li class="footer-col__item">Aviso de privacidad</li>
+            <li class="footer-col__item">Política de cookies</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col__title">Social</h3>
+          <ul class="footer-col__list">
+            <li class="footer-col__item"><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-col__item">Instagram</a></li>
+            <li class="footer-col__item"><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-col__item">Facebook</a></li>
+            <li class="footer-col__item"><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="footer-col__item">TikTok</a></li>
+            <li class="footer-col__item"><a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-col__item">YouTube</a></li>
+            <li class="footer-col__item"><a href="https://www.pinterest.com/" target="_blank" rel="noopener" class="footer-col__item">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Stem Cells Cosmética Profesional SAS. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" aria-label="Volver al inicio">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</a>
+
+<div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Buscar productos">
+  <div class="search-overlay__backdrop" id="searchBackdrop"></div>
+  <div class="search-overlay__panel">
+    <div class="search-overlay__row">
+      <svg class="search-overlay__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L22 22"/></svg>
+      <input class="search-overlay__input" id="searchInput" type="search" placeholder="Buscar productos..." autocomplete="off" spellcheck="false" aria-label="Buscar">
+      <button class="search-overlay__close" id="searchClose" aria-label="Cerrar búsqueda">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="search-overlay__results" id="searchResults" role="listbox"></ul>
+  </div>
+</div>
+
+<script src="js/components.js"></script>
+<script>
+(function () {
+  var orders = JSON.parse(localStorage.getItem('stemcells_orders') || '[]');
+  var empty = document.getElementById('ordersEmpty');
+  var list  = document.getElementById('ordersList');
+
+  if (!orders.length) {
+    empty.style.display = '';
+    return;
+  }
+
+  list.innerHTML = orders.map(function (order) {
+    var itemsHtml = order.items.map(function (item) {
+      return '<div style="display:flex;align-items:center;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--c-border)">' +
+        '<img src="' + item.img + '" alt="' + item.name + '" style="width:52px;height:52px;object-fit:cover;border-radius:4px;flex-shrink:0">' +
+        '<div style="flex:1">' +
+          '<p style="font-size:0.88rem;font-weight:500;color:var(--c-ink)">' + item.name + '</p>' +
+          '<p style="font-size:0.78rem;color:var(--c-mid)">Cantidad: ' + item.qty + '</p>' +
+        '</div>' +
+        '<span style="font-size:0.88rem;font-weight:500;color:var(--c-ink)">' + (item.price * item.qty).toFixed(2).replace('.', ',') + '&nbsp;€</span>' +
+      '</div>';
+    }).join('');
+
+    var shippingHtml = order.shipping > 0
+      ? '<div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--c-mid);padding:0.35rem 0">' +
+          '<span>Gastos de envío</span><span>' + order.shipping.toFixed(2).replace('.', ',') + '&nbsp;€</span>' +
+        '</div>'
+      : '<div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--c-mid);padding:0.35rem 0">' +
+          '<span>Gastos de envío</span><span style="color:var(--c-rose)">Gratis</span>' +
+        '</div>';
+
+    return '<details class="order-card" open>' +
+      '<summary class="order-card__summary">' +
+        '<div class="order-card__meta">' +
+          '<span class="order-card__id">Pedido #' + String(order.id).slice(-6) + '</span>' +
+          '<span class="order-card__date">' + order.date + '</span>' +
+        '</div>' +
+        '<div class="order-card__right">' +
+          '<span class="order-card__total">' + order.total.toFixed(2).replace('.', ',') + '&nbsp;€</span>' +
+          '<span class="order-card__status">Confirmado</span>' +
+        '</div>' +
+      '</summary>' +
+      '<div class="order-card__body">' +
+        (order.nombre ? '<p style="font-size:0.82rem;color:var(--c-mid);margin-bottom:1rem">Envío a: <strong style="color:var(--c-ink)">' + order.nombre + '</strong>' + (order.direccion ? ' — ' + order.direccion : '') + '</p>' : '') +
+        itemsHtml +
+        '<div style="margin-top:0.75rem">' +
+          shippingHtml +
+          '<div style="display:flex;justify-content:space-between;font-size:0.95rem;font-weight:600;color:var(--c-ink);padding-top:0.5rem;border-top:2px solid var(--c-ink);margin-top:0.25rem">' +
+            '<span>Total</span><span>' + order.total.toFixed(2).replace('.', ',') + '&nbsp;€</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</details>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

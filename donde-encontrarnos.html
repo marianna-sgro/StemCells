@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dónde Encontrarnos — Stem Cells Cosmética Profesional</title>
+  <meta name="description" content="Encuentra los salones de belleza a nivel nacional que distribuyen y aplican los productos Stem Cells Cosmética Profesional.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stem Cells Cosmética Profesional">
+  <meta property="og:title" content="Dónde Encontrarnos — Stem Cells Cosmética Profesional">
+  <meta property="og:description" content="Encuentra los salones de belleza a nivel nacional que distribuyen y aplican los productos Stem Cells Cosmética Profesional.">
+  <meta property="og:image" content="https://TU-DOMINIO-AQUI.vercel.app/images/hero-cabello.png">
+  <meta property="og:url" content="https://TU-DOMINIO-AQUI.vercel.app/donde-encontrarnos.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dónde Encontrarnos — Stem Cells Cosmética Profesional">
+  <meta name="twitter:description" content="Encuentra los salones de belleza a nivel nacional que distribuyen y aplican los productos Stem Cells Cosmética Profesional.">
+  <meta name="twitter:image" content="https://TU-DOMINIO-AQUI.vercel.app/images/hero-cabello.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="promobar" role="region" aria-label="Anuncios y promociones">
+    <div class="promobar__track">
+      <span class="promobar__msg promobar__msg--1">Envío gratuito en pedidos superiores a 50&nbsp;€</span>
+      <span class="promobar__msg promobar__msg--2">Asesoría personalizada gratuita para tu salón o uso personal</span>
+      <span class="promobar__msg promobar__msg--3">Descubre nuestros nuevos productos con células madre vegetales</span>
+    </div>
+    <div class="promobar__lang">
+      <a href="#" class="promobar__lang-link promobar__lang-link--active" lang="es" aria-label="Español">ESP</a>
+      <span class="promobar__lang-sep" aria-hidden="true">|</span>
+      <a href="#" class="promobar__lang-link" lang="en" aria-label="English">EN</a>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle__input" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle__label" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </label>
+    <a href="index.html" class="main-nav__logo-link">
+      <img src="images/logo.png" alt="Stem Cells Cosmética Profesional" class="main-nav__logo">
+    </a>
+    <ul class="main-nav__list">
+      <li><a href="quienes-somos.html" class="main-nav__link">Quienes Somos</a></li>
+      <li class="main-nav__item--has-drop">
+          <a href="catalogo.html" class="main-nav__link">Catálogo <svg class="nav-drop-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
+          <div class="nav-dropdown">
+            <ul class="nav-dropdown__list">
+              <li><a href="catalogo.html?open=ampollas-nutri-cell" class="nav-dropdown__link">Ampollas Nutri + Cell</a></li>
+              <li><a href="catalogo.html?open=shampoo" class="nav-dropdown__link">Shampoo Pre-Tratamiento</a></li>
+              <li><a href="catalogo.html?open=protector-termico" class="nav-dropdown__link">Protector Térmico Nutricell</a></li>
+              <li><a href="catalogo.html?open=crema-de-peinar" class="nav-dropdown__link">Crema de Peinar Nutricell</a></li>
+              <li><a href="catalogo.html?open=alpin-rose" class="nav-dropdown__link">Ampolla Alpin Rose</a></li>
+              <li><a href="catalogo.html?open=btx-express" class="nav-dropdown__link">Ampolla BTX Express</a></li>
+              <li><a href="catalogo.html?open=cocktail-express" class="nav-dropdown__link">Cocktail EXPRESS</a></li>
+              <li class="nav-dropdown__divider"></li>
+              <li><a href="catalogo.html" class="nav-dropdown__link nav-dropdown__link--all">Ver todo →</a></li>
+            </ul>
+          </div>
+        </li>
+      <li><a href="donde-encontrarnos.html" class="main-nav__link">Donde encontrarnos</a></li>
+      <li><a href="tutoriales.html" class="main-nav__link">Tutoriales</a></li>
+    </ul>
+    <div class="main-nav__actions">
+      <button class="main-nav__action-btn" id="searchBtn" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M16.5 16.5L22 22"/>
+        </svg>
+      </button>
+      <a href="mi-cuenta.html" class="main-nav__action-btn" aria-label="Iniciar sesión / Cuenta">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-3.5 3.6-6 8-6s8 2.5 8 6"/>
+        </svg>
+      </a>
+      <a href="carrito.html" class="main-nav__action-btn" aria-label="Carrito" style="position:relative">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none" aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+      <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Dónde Encontrarnos</li>
+    </ol>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <section class="page-banner" aria-labelledby="donde-title">
+    <img src="images/donde-header.png" alt="Salones de belleza distribuidores Stem Cells" class="page-banner__img">
+    <div class="page-banner__overlay"></div>
+    <div class="container page-banner__content">
+      <h1 class="page-banner__title" id="donde-title">Dónde Encontrarnos</h1>
+      <p class="page-banner__sub">Encuentra nuestros productos en los mejores salones de belleza a nivel nacional.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--c-white)" aria-labelledby="mapa-title">
+    <div class="container">
+      <h2 class="section-title" id="mapa-title">Ubicación de nuestros salones</h2>
+      <div class="section-divider" role="separator"></div>
+      <div id="salones-map" style="height:480px;border-radius:4px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);" aria-label="Mapa interactivo con la ubicación de los salones distribuidores"></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--c-white)" aria-labelledby="salones-title">
+    <div class="container">
+      <h2 class="section-title" id="salones-title">Salones Distribuidores</h2>
+      <div class="section-divider" role="separator"></div>
+      <div class="salons-grid" role="list">
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-murano.png" alt="Murano Peluquerías" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">Murano Peluquerías</h3>
+          <p class="salon-card__city">Bogotá, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-emiro.png" alt="EMIRO Peluquerías" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">EMIRO Peluquerías</h3>
+          <p class="salon-card__city">Medellín, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-palma.png" alt="Palma Natural &amp; Beauty Color" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">PALMA Beauty &amp; Multistudio</h3>
+          <p class="salon-card__city">Cali, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-sovrano.png" alt="SOVRANO" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">SOVRANO</h3>
+          <p class="salon-card__city">Bogotá, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-ricardo-plata.png" alt="Ricardo Plata" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">Ricardo Plata</h3>
+          <p class="salon-card__city">Barranquilla, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-brilo.png" alt="BRILO Bellezareal" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">BRILO Bellezareal</h3>
+          <p class="salon-card__city">Medellín, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-hairspa.png" alt="HairSpa" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">HairSpa</h3>
+          <p class="salon-card__city">Bogotá, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-marco.png" alt="MARCO Centro de Belleza" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">MARCO Centro de Belleza</h3>
+          <p class="salon-card__city">Cali, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-team-hair.png" alt="TEAM HAIR Peluquería" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">TEAM HAIR Peluquería</h3>
+          <p class="salon-card__city">Bogotá, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-blowdry.png" alt="BlowDry Hair Center" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">BlowDry Hair Center</h3>
+          <p class="salon-card__city">Medellín, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-zaloon.png" alt="ZALOON Professional Hair" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">ZALOON Professional Hair</h3>
+          <p class="salon-card__city">Bogotá, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-milan-santoro.png" alt="Milán·Santoro Salón" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">Milán·Santoro Salón</h3>
+          <p class="salon-card__city">Cali, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-alejandro-rivera.png" alt="Alejandro Rivera Atelier" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">Alejandro Rivera Atelier</h3>
+          <p class="salon-card__city">Bogotá, Colombia</p>
+        </article>
+
+        <article class="salon-card" role="listitem">
+          <div class="salon-card__img">
+            <img src="images/socio-estefania-mora.png" alt="Estefania Mora Colorista" loading="lazy" class="salon-card__logo">
+          </div>
+          <h3 class="salon-card__name">Estefania Mora Colorista</h3>
+          <p class="salon-card__city">Medellín, Colombia</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="salon-cta-banner" aria-label="¿Tienes un salón de belleza?">
+    <img src="images/hero-bg.png" alt="" aria-hidden="true" class="salon-cta-banner__img">
+    <div class="salon-cta-banner__overlay"></div>
+    <div class="container salon-cta-banner__content">
+      <h2 class="salon-cta-banner__title">¿Tienes un salón de belleza?</h2>
+      <p class="salon-cta-banner__sub">Si deseas distribuir nuestros productos en tu salón o aparecer en este directorio, contáctanos. Trabajamos con los mejores profesionales del sector.</p>
+      <a href="distribuidores.html" class="btn-primary">Quiero ser distribuidor</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" aria-label="Pie de página">
+  <div class="container">
+    <div class="footer-newsletter">
+      <h2 class="footer-newsletter__title">Regístrate para recibir novedades de Stem Cells</h2>
+      <form class="footer-newsletter__form" action="#" method="post" novalidate aria-label="Suscripción al boletín">
+        <input type="email" class="footer-newsletter__input" placeholder="Dirección de correo electrónico" aria-label="Correo electrónico" autocomplete="email">
+        <button type="submit" class="footer-newsletter__btn">Regístrate <span aria-hidden="true">›</span></button>
+      </form>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Stem Cells Cosmética Profesional" class="footer-logo">
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3 class="footer-col__title">Soporte</h3>
+          <ul class="footer-col__list">
+            <li class="footer-col__item"><a href="contacto.html" class="footer-col__item">Contacta con nosotros</a></li>
+            <li class="footer-col__item"><a href="faq.html" class="footer-col__item">FAQ</a></li>
+            <li class="footer-col__item"><a href="donde-encontrarnos.html" class="footer-col__item">Localizador de salones</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col__title">Legal</h3>
+          <ul class="footer-col__list">
+            <li class="footer-col__item">Términos y condiciones</li>
+            <li class="footer-col__item">Aviso de privacidad</li>
+            <li class="footer-col__item">Política de cookies</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col__title">Social</h3>
+          <ul class="footer-col__list">
+            <li class="footer-col__item"><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-col__item">Instagram</a></li>
+            <li class="footer-col__item"><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-col__item">Facebook</a></li>
+            <li class="footer-col__item"><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="footer-col__item">TikTok</a></li>
+            <li class="footer-col__item"><a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-col__item">YouTube</a></li>
+            <li class="footer-col__item"><a href="https://www.pinterest.com/" target="_blank" rel="noopener" class="footer-col__item">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Stem Cells Cosmética Profesional SAS. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" aria-label="Volver al inicio">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</a>
+
+<div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Buscar productos">
+  <div class="search-overlay__backdrop" id="searchBackdrop"></div>
+  <div class="search-overlay__panel">
+    <div class="search-overlay__row">
+      <svg class="search-overlay__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L22 22"/></svg>
+      <input class="search-overlay__input" id="searchInput" type="search" placeholder="Buscar productos..." autocomplete="off" spellcheck="false" aria-label="Buscar">
+      <button class="search-overlay__close" id="searchClose" aria-label="Cerrar búsqueda">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="search-overlay__results" id="searchResults" role="listbox"></ul>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var map = L.map('salones-map', { scrollWheelZoom: false }).setView([5.5, -74.5], 6);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  var icon = L.divIcon({
+    className: '',
+    html: '<div style="width:16px;height:16px;background:#D8177D;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 8px rgba(216,23,125,0.5)"></div>',
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+    popupAnchor: [0, -12]
+  });
+
+  var salones = [
+    { name: 'Murano Peluquerías',         city: 'Bogotá',       tel: '+57 310 482 6173', lat: 4.6682, lng: -74.0582 },
+    { name: 'SOVRANO',                    city: 'Bogotá',       tel: '+57 314 739 5028', lat: 4.6501, lng: -74.0800 },
+    { name: 'HairSpa',                    city: 'Bogotá',       tel: '+57 300 861 4392', lat: 4.6693, lng: -74.0942 },
+    { name: 'TEAM HAIR Peluquería',       city: 'Bogotá',       tel: '+57 316 274 8051', lat: 4.7110, lng: -74.0721 },
+    { name: 'ZALOON Professional Hair',   city: 'Bogotá',       tel: '+57 321 593 7840', lat: 4.6290, lng: -74.0650 },
+    { name: 'Alejandro Rivera Atelier',   city: 'Bogotá',       tel: '+57 313 648 2917', lat: 4.6760, lng: -74.0500 },
+    { name: 'EMIRO Peluquerías',          city: 'Medellín',     tel: '+57 304 715 8362', lat: 6.2442, lng: -75.5812 },
+    { name: 'BRILO Bellezareal',          city: 'Medellín',     tel: '+57 318 043 6295', lat: 6.2530, lng: -75.5743 },
+    { name: 'BlowDry Hair Center',        city: 'Medellín',     tel: '+57 311 927 4083', lat: 6.2060, lng: -75.5680 },
+    { name: 'Estefania Mora Colorista',   city: 'Medellín',     tel: '+57 320 384 6719', lat: 6.2710, lng: -75.5610 },
+    { name: 'PALMA Beauty & Multistudio', city: 'Cali',         tel: '+57 315 268 4037', lat: 3.4433, lng: -76.5212 },
+    { name: 'MARCO Centro de Belleza',    city: 'Cali',         tel: '+57 302 751 9468', lat: 3.4710, lng: -76.5320 },
+    { name: 'Milán·Santoro Salón',        city: 'Cali',         tel: '+57 317 493 2056', lat: 3.3990, lng: -76.5350 },
+    { name: 'Ricardo Plata',              city: 'Barranquilla', tel: '+57 312 865 4071', lat: 10.9878, lng: -74.7889 }
+  ];
+
+  salones.forEach(function(s){
+    L.marker([s.lat, s.lng], { icon: icon })
+      .addTo(map)
+      .bindPopup('<strong style="color:#D8177D">' + s.name + '</strong><br><span style="font-size:0.82rem;color:#555">' + s.city + ', Colombia</span><br><a href="tel:' + s.tel.replace(/\s/g,'') + '" style="font-size:0.82rem;color:#1C1C1E;text-decoration:none">' + s.tel + '</a>');
+  });
+})();
+</script>
+
+<script src="js/components.js"></script>
+</body>
+</html>
